@@ -39,16 +39,19 @@ namespace ExpenseTracker.Controllers
             return View(category);
         }
         
-        // GET: Category/Create
-        public IActionResult Create()
+        // GET: Category/AddOrEdit
+        public IActionResult AddOrEdit(int id=0)
         {
-            return View(new Category());
+            if (id == 0)
+                return View(new Category());
+            else
+                return View(_context.Categories.Find(id));
         }
 
-        // POST: Category/Create
+        // POST: Category/AddOrEdit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,Title,Icon,Type")] Category category)
+        public async Task<IActionResult> AddOrEdit([Bind("CategoryId,Title,Icon,Type")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -59,20 +62,38 @@ namespace ExpenseTracker.Controllers
             return View(category);
         }
 
-        // GET: Category/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Category/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
+            var category = await _context.Categories
+                .FirstOrDefaultAsync(m => m.CategoryId == id);
             if (category == null)
             {
                 return NotFound();
             }
+
             return View(category);
+        }
+
+        // POST: Category/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var category = await _context.Categories.FindAsync(id);
+            _context.Categories.Remove(category);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool CategoryExists(int id)
+        {
+            return _context.Categories.Any(e => e.CategoryId == id);
         }
     }
 }

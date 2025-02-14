@@ -27,14 +27,14 @@ jobs:
         run: dotnet build --no-restore $PROJECT_LOCATION
       - name: Pack
         run: |
-          dotnet publish $PROJECT_LOCATION -c Release --output "${{ github.workspace }}/${{github.run_id}}"
-          cd ${{github.run_id}}
-          zip -r ../${{github.run_id}}.zip .
+          dotnet publish $PROJECT_LOCATION -c Release --output "${{ github.workspace }}/release"
+          cd release
+          zip -r ../release.zip .
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4.3.3
         with: 
           name: deploy-files
-          path: ${{github.run_id}}.zip
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -42,6 +42,10 @@ jobs:
 
     steps:
       - uses: actions/download-artifact@v4.1.7
+        with:
+          name: deploy-files
+      - name: List downloaded files
+        run: ls -la
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -50,7 +54,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Deploy
         run: |
-          aws s3 cp "deploy-files/${{github.run_id}}.zip" s3://elasticbeanstalk-eu-west-2-${{ secrets.AWS_ACCOUNT_ID }}/artifact/tyler-expense-tracker/
-          aws elasticbeanstalk create-application-version --application-name $ELASTIC_BEANSTALK_NAME --version-label ${{github.run_id}} --description ${{github.run_id}} --source-bundle S3Bucket="elasticbeanstalk-eu-west-2-${{ secrets.AWS_ACCOUNT_ID }}",S3Key="artifact/tyler-expense-tracker/${{github.run_id}}.zip"
-          aws elasticbeanstalk update-environment --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME --version-label ${{github.run_id}}
+          TIMESTAMP=$(date +%s)
+          aws s3 cp "deploy-files/release.zip" s3://elasticbeanstalk-eu-west-2-${{ secrets.AWS_ACCOUNT_ID }}/artifact/tyler-expense-tracker/release-${TIMESTAMP}.zip
+          aws elasticbeanstalk create-application-version --application-name $ELASTIC_BEANSTALK_NAME --version-label release-${TIMESTAMP} --description "Release ${TIMESTAMP}" --source-bundle S3Bucket="elasticbeanstalk-eu-west-2-${{ secrets.AWS_ACCOUNT_ID }}",S3Key="artifact/tyler-expense-tracker/release-${TIMESTAMP}.zip"
+          aws elasticbeanstalk update-environment --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME --version-label release-${TIMESTAMP}
           aws elasticbeanstalk wait environment-updated --application-name $ELASTIC_BEANSTALK_NAME --environment-name $ELASTIC_BEANSTALK_ENV_NAME

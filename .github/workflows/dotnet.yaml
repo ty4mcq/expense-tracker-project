@@ -8,8 +8,8 @@ on:
 
 env:
   PROJECT_LOCATION: ExpenseTracker/ExpenseTracker.csproj
-  ELASTIC_BEANSTALK_NAME: tyler-expense-tracker-app
-  ELASTIC_BEANSTALK_ENV_NAME: Tyler-expense-tracker-app-env
+  ELASTIC_BEANSTALK_NAME: ty4mcq-expense-tracker-app
+  ELASTIC_BEANSTALK_ENV_NAME: ty4mcq-expense-tracker-env
 
 jobs:
   build:

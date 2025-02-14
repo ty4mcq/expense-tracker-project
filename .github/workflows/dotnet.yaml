@@ -1,4 +1,4 @@
-name: .NET
+name: Auto-Deploy to Elastic Beanstalk
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
 
 env:
   PROJECT_LOCATION: ExpenseTracker/ExpenseTracker.csproj
-  ELASTIC_BEANSTALK_NAME: dotnet-linux
-  ELASTIC_BEANSTALK_ENV_NAME: Dotnet-linux-env
+  ELASTIC_BEANSTALK_NAME: tyler-expense-tracker-app
+  ELASTIC_BEANSTALK_ENV_NAME: Tyler-expense-tracker-app-env
 
 jobs:
   build:

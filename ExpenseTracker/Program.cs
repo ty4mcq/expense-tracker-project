@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 // Dependency Injection
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+options.UseSqlServer(Environment.GetEnvironmentVariable("RDS_DB_CONNECTION_STRING")));
 
 var app = builder.Build();
 

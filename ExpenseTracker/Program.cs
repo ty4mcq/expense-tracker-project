@@ -14,7 +14,13 @@ else
     builder.Environment.EnvironmentName = "Development";
 }
 
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Environment.GetEnvironmentVariable("SYNCFUSION_LICENCE_KEY"));
+// Get Syncfusion license key based on environment
+var syncfusionLicenseKey = builder.Environment.IsDevelopment()
+    ? builder.Configuration["SYNCFUSION_LICENCE_KEY"]
+    : Environment.GetEnvironmentVariable("SYNCFUSION_LICENCE_KEY");
+
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicenseKey);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

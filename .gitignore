@@ -1,1 +1,14 @@
+# Development settings
 ExpenseTracker/appsettings.Development.json
+
+# Build directories
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/

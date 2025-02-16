@@ -1,7 +1,5 @@
 # Expense Tracker Project
 
-Current Link: http://ty4mcq-expense-tracker.eu-west-2.elasticbeanstalk.com
-
 This is an Expense Tracker application built using ASP.NET Core MVC with Syncfusion elements. The application is automatically deployed to AWS Elastic Beanstalk using GitHub Actions.
 
 ## Features

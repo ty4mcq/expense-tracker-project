@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VrG5WMAj2TpA1rFXtfbJ+bL0CDOeuuadIjJmaAxj9so=",
+  "Hash": "CzR2g2Wbql3ozaHXq5t+yeeV/9aQQlm9Ez2WSHewdjU=",
   "Source": "ExpenseTracker",
   "BasePath": "_content/ExpenseTracker",
   "Mode": "Default",
@@ -101,12 +101,12 @@
       "OriginalItemSpec": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-46nb147ugc.gz",
+      "Identity": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-51wy25iw6r.gz",
       "SourceId": "ExpenseTracker",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/ExpenseTracker",
-      "RelativePath": "css/site#[.{fingerprint=46nb147ugc}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=51wy25iw6r}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -115,8 +115,8 @@
       "RelatedAsset": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "y7k53rg4g4",
-      "Integrity": "YtvV19sRPhm09THXYdMxaBlnRfEE8r7/w9RTqeKtvhI=",
+      "Fingerprint": "2s9oq1jkfb",
+      "Integrity": "gnXcBDEhgIYJ9aHfxkO9ckKRRcpV+axLTwsGeKZFcWE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/wwwroot/css/site.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "46nb147ugc",
-      "Integrity": "9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc=",
+      "Fingerprint": "51wy25iw6r",
+      "Integrity": "V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -2728,13 +2728,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.46nb147ugc.css",
-      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-46nb147ugc.gz",
+      "Route": "css/site.51wy25iw6r.css",
+      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-51wy25iw6r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002898550725"
+          "Quality": "0.002652519894"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +2744,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "344"
+          "Value": "376"
         },
         {
           "Name": "ETag",
-          "Value": "\"YtvV19sRPhm09THXYdMxaBlnRfEE8r7/w9RTqeKtvhI=\""
+          "Value": "\"gnXcBDEhgIYJ9aHfxkO9ckKRRcpV+axLTwsGeKZFcWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 18:03:05 GMT"
+          "Value": "Sun, 16 Feb 2025 02:46:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,13 +2772,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc=\""
+          "Value": "W/\"V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "46nb147ugc"
+          "Value": "51wy25iw6r"
         },
         {
           "Name": "label",
@@ -2786,12 +2786,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc="
+          "Value": "sha256-V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y="
         }
       ]
     },
     {
-      "Route": "css/site.46nb147ugc.css",
+      "Route": "css/site.51wy25iw6r.css",
       "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2801,7 +2801,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "760"
+          "Value": "848"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +2809,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc=\""
+          "Value": "\"V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 18:03:05 GMT"
+          "Value": "Sun, 16 Feb 2025 02:46:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,7 +2823,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "46nb147ugc"
+          "Value": "51wy25iw6r"
         },
         {
           "Name": "label",
@@ -2831,13 +2831,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc="
+          "Value": "sha256-V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y="
         }
       ]
     },
     {
-      "Route": "css/site.46nb147ugc.css.gz",
-      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-46nb147ugc.gz",
+      "Route": "css/site.51wy25iw6r.css.gz",
+      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-51wy25iw6r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2846,7 +2846,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "344"
+          "Value": "376"
         },
         {
           "Name": "Content-Type",
@@ -2854,11 +2854,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YtvV19sRPhm09THXYdMxaBlnRfEE8r7/w9RTqeKtvhI=\""
+          "Value": "\"gnXcBDEhgIYJ9aHfxkO9ckKRRcpV+axLTwsGeKZFcWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 18:03:05 GMT"
+          "Value": "Sun, 16 Feb 2025 02:46:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +2876,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "46nb147ugc"
+          "Value": "51wy25iw6r"
         },
         {
           "Name": "label",
@@ -2884,18 +2884,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YtvV19sRPhm09THXYdMxaBlnRfEE8r7/w9RTqeKtvhI="
+          "Value": "sha256-gnXcBDEhgIYJ9aHfxkO9ckKRRcpV+axLTwsGeKZFcWE="
         }
       ]
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-46nb147ugc.gz",
+      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-51wy25iw6r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002898550725"
+          "Quality": "0.002652519894"
         }
       ],
       "ResponseHeaders": [
@@ -2905,15 +2905,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "344"
+          "Value": "376"
         },
         {
           "Name": "ETag",
-          "Value": "\"YtvV19sRPhm09THXYdMxaBlnRfEE8r7/w9RTqeKtvhI=\""
+          "Value": "\"gnXcBDEhgIYJ9aHfxkO9ckKRRcpV+axLTwsGeKZFcWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 18:03:05 GMT"
+          "Value": "Sun, 16 Feb 2025 02:46:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2933,13 +2933,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc=\""
+          "Value": "W/\"V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc="
+          "Value": "sha256-V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y="
         }
       ]
     },
@@ -2954,7 +2954,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "760"
+          "Value": "848"
         },
         {
           "Name": "Content-Type",
@@ -2962,11 +2962,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc=\""
+          "Value": "\"V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 18:03:05 GMT"
+          "Value": "Sun, 16 Feb 2025 02:46:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2976,13 +2976,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-9JQu6Be185eCKFa9CmgYJ6aNR6zBhMEaVznngesvaOc="
+          "Value": "sha256-V5MlR1c1ym7MkAhDNP/9i0lyx/1JHDpmj4FrfMOHK/Y="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-46nb147ugc.gz",
+      "AssetFile": "/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-51wy25iw6r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2991,7 +2991,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "344"
+          "Value": "376"
         },
         {
           "Name": "Content-Type",
@@ -2999,11 +2999,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YtvV19sRPhm09THXYdMxaBlnRfEE8r7/w9RTqeKtvhI=\""
+          "Value": "\"gnXcBDEhgIYJ9aHfxkO9ckKRRcpV+axLTwsGeKZFcWE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 18:03:05 GMT"
+          "Value": "Sun, 16 Feb 2025 02:46:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3021,7 +3021,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YtvV19sRPhm09THXYdMxaBlnRfEE8r7/w9RTqeKtvhI="
+          "Value": "sha256-gnXcBDEhgIYJ9aHfxkO9ckKRRcpV+axLTwsGeKZFcWE="
         }
       ]
     },

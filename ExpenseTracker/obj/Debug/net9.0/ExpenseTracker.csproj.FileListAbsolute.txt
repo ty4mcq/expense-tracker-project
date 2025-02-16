@@ -222,4 +222,4 @@
 /Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/bin/Debug/net9.0/Syncfusion.EJ2.dll
 /Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/bin/Debug/net9.0/Syncfusion.Licensing.dll
 /Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/ExpenseTracker.MvcApplicationPartsAssemblyInfo.cs
-/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-46nb147ugc.gz
+/Users/ty4mcq/Git/expense-tracker-project/ExpenseTracker/obj/Debug/net9.0/compressed/2kc4ra80sh-51wy25iw6r.gz

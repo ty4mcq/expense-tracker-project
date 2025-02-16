@@ -3,14 +3,30 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY"));
+// Set environment based on environment variable
+var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+if (environmentName == "Production")
+{
+    builder.Environment.EnvironmentName = "Production";
+}
+else
+{
+    builder.Environment.EnvironmentName = "Development";
+}
+
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Environment.GetEnvironmentVariable("SYNCFUSION_LICENCE_KEY"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Use the connection string from configuration based on environment
+var connectionString = builder.Environment.IsDevelopment() 
+    ? builder.Configuration.GetConnectionString("DefaultConnection")
+    : Environment.GetEnvironmentVariable("RDS_DB_CONNECTION_STRING");
+
 // Dependency Injection
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(Environment.GetEnvironmentVariable("RDS_DB_CONNECTION_STRING")));
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
@@ -19,6 +35,11 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+else
+{
+    app.UseDeveloperExceptionPage();
+}
+
 app.UseRouting();
 
 app.UseAuthorization();
@@ -29,6 +50,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();

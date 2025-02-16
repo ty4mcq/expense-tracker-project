@@ -8,24 +8,9 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Environment.GetEn
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var environment = builder.Environment.EnvironmentName;
-string? connectionString;
-
-if (environment == "Production")
-{
-    connectionString = Environment.GetEnvironmentVariable("RDS_DB_CONNECTION_STRING");
-}
-else
-{
-    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-}
-
-// Add the connection string to the configuration
-builder.Configuration["ConnectionStrings:DefaultConnection"] = connectionString;
-
 // Dependency Injection
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(Environment.GetEnvironmentVariable("RDS_DB_CONNECTION_STRING")));
 
 var app = builder.Build();
 

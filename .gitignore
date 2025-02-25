@@ -13,3 +13,4 @@ ExpenseTracker/appsettings.Development.json
 # VS Code
 .vscode/
 .fake
+/.vs

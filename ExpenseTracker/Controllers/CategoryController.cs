@@ -21,8 +21,9 @@ namespace ExpenseTracker.Controllers
                 View(await _context.Categories.ToListAsync()) :
                 Problem("Entity set 'ApplicationDbContext.Categories' is null.");
         }
-        
+
         // GET: Category/AddOrEdit
+        [HttpGet]
         public IActionResult AddOrEdit(int id=0)
         {
             if (id == 0)

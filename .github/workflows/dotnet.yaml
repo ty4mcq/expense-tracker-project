@@ -1,10 +1,7 @@
 name: Auto-Deploy to Elastic Beanstalk
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 env:
   PROJECT_LOCATION: ExpenseTracker/ExpenseTracker.csproj
